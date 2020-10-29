@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+
+{% block title %}СТО «АвтоРусь»{% endblock %}
+
+{% block body %}
+    <header>
+        <nav id="menu" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div class="navbar-brand">
+                <img class="d-inline-block" width="45" src="{{ url_for('static', filename='img/logo.png') }}" alt="СТО «АвтоРусь»">
+                АвтоРусь
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item text-center active">
+                        <a href="#aboutUs" class="nav-link">О нас</a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="#services" class="nav-link">Наши услуги</a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="#application" class="nav-link">Подать заявку</a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="#trackApplication" class="nav-link">Отследить заявку</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="banner d-flex text-center align-items-center justify-content-center">
+            <div class="banner-text-wrapper col-md-6 p-5">
+                <h1 class="display-4 mb-3">ТЕХНИЧЕСКИЙ ОСМОТР</h1>
+                <p class="lead">
+                    Наш автосервис проводит послегарантийное техническое
+                    обслуживание любых иномарок согласно рекомендациям
+                    производителя автомобиля.
+                </p>
+                <a href="#application" class="btn btn-dark btn-lg mt-4">Подать заявку</a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="py-4" id="aboutUs">
+            <h2 class="display-4 text-center mb-4">О нас</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <div class="description">
+                            <p class="lead">Компания ООО «АвтоРусь» работает c 2007 года и добилась отличных результатов на рынке ремонта
+                        и обслуживания легковых автомобилей и малого коммерческого транспорта. Мы одни из немногих, кто может
+                        обслуживать автомобили бизнес и люкс класса в полном объеме на высоком уровне.</p>
+                            <p class="lead">Автотехцентр обслуживает автомобили иностранного производства постгарантийного сегмента. Техническое обеспечение,
+                            профессиональная команда специалистов, современное оборудование позволяют обслуживать и новые автомобили.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="department-list-wrap col-md-8">
+                        <p class="h2">Наш сервис состоит из:</p>
+                        <ul class="department-list">
+                            <li>Слесарный цех — 8 постов</li>
+                            <li>Пост регулировки углов развала и схождения</li>
+                            <li>Диагностический цех — 3 поста</li>
+                            <li>Кузовной цех — 9 постов</li>
+                            <li>Автомойка — 6 постов</li>
+                            <li>Шиномонтаж</li>
+                        </ul>
+                    </div>
+                    <div class="department-list-image col-md-4 d-none d-md-block">
+                        <img class="img-fluid" src="{{ url_for('static', filename='img/about-us-image.png') }}" alt="Механник">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light py-4" id="services">
+            <h2 class="display-4 text-center mb-4">Наши услуги</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="slider col-md-12">
+                        <div id="servicesCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#servicesCarousel" data-slide="0" class="active"></li>
+                                <li data-target="#servicesCarousel" data-slide="1"></li>
+                                <li data-target="#servicesCarousel" data-slide="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block" src="{{ url_for('static', filename='img/slider_1.jpg') }}" alt="О Техническом осмотре">
+                                    <div class="carousel-caption">
+                                        <h5>Технический осмотр</h5>
+                                        <p>
+                                            Мы проводим полное техническое обслуживание любых иномарок
+                                            согласно рекомендациям производителя автомобиля.
+                                            Наше тех.обслуживание дешевле на 30%, чем у официального диллера.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="{{ url_for('static', filename='img/slider_2.jpg') }}" alt="О Ремонте">
+                                    <div class="carousel-caption">
+                                        <h5>Ремонт</h5>
+                                        <p>
+                                            Мы выполняем ремонтные работы любой сложности в короткие сроки.
+                                            Если после тех.осмотра мы обнаруживаем неполадку,
+                                            Вы получаете скидку в 15% на ремонтные работы в нашем сервисном центре.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="{{ url_for('static', filename='img/slider_3.jpg') }}" alt="О Тюнинге">
+                                    <div class="carousel-caption">
+                                        <h5>Тюнинг</h5>
+                                        <p>
+                                            Также, в сервисе «АвтоРусь» Вы имеете возможность модифицировать
+                                            Ваше транспортное средство с полной гарантией и дальнейшим обслуживанием.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#servicesCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Предыдущий слайд</span>
+                            </a>
+                            <a href="#servicesCarousel" class="carousel-control-next" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Следующий слайд</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4" id="application">
+            <h2 class="display-4 text-center mb-4">Запись на ТО</h2>
+            <div id="app_form_success" class="alert alert-success col-md-4 mx-auto d-none" role="alert"></div>
+            <div class="col-md-8 mx-auto">
+                <form id="form_app" name="form_app" action="{{ url_for('register_application') }}" method="POST">
+                    <div class="row">
+                        <div class="car col-md-6 p-4">
+                        {% for field in application_form %}
+                            {% if field.name == 'car_brand' or field.name == 'car_model' %}
+                                    <div class="form-group">
+                                        {{ field.label(class='col-form-label') }}
+                                        {{ field(class='form-control') }}
+                                        <div id="{{ field.name }}_error" class="alert alert-danger d-none" role="alert"></div>
+                                    </div>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                        <div class="person col-md-6 p-4">
+                        {% for field in application_form %}
+                            {% if field.name != 'car_brand' and field.name != 'car_model' and field.name != 'submit' %}
+                                <div class="form-group">
+                                    {{ field.label(class='col-form-label') }}
+                                    {{ field(class='form-control') }}
+                                    <div id="{{ field.name }}_error" class="alert alert-danger d-none" role="alert"></div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    </div>
+                    {{ application_form.submit(class='btn btn-lg btn-dark d-block mx-auto') }}
+                </form>
+            </div>
+        </section>
+        <section class="bg-light py-4" id="trackApplication">
+            <h2 class="display-4 text-center mb-4">Отследить заявку</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="track-app-description col-xl-8 col-lg-6 text-center mx-auto">
+                        <p class="lead">
+                            Если Вы уже подали заявку и Вам не позвонили,
+                            можете проверить статус Вашей заявки прямо сейчас.
+                            Введите трек-код, который мы Вам отправляли на электронную почту.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="track-form col-md-6 mx-auto">
+                        <div class="form-group py-4">
+                            <span class="sr-only">Введите трек-код:</span>
+                            <div id="trackInput_error" class="alert alert-danger d-none" role="alert"></div>
+                            <input id="trackInput" class="track-input form-control mx-auto" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+                        </div>
+                        <button id="getAppInfoBtn" class="btn btn-lg d-block mx-auto">Отследить заявку</button>
+                    </div>
+                </div>
+            </div>
+            <div class="track-image d-none d-lg-block">
+                <img src="{{ url_for('static', filename='img/track_mechanic.png') }}" alt="Отследить заявку">
+            </div>
+        </section>
+        <div id="appInfoModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Заявка № <span data-info="track_number"></span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Марка машины</th>
+                                    <th scope="col">Модель машины</th>
+                                    <th scope="col">Цена ТО</th>
+                                    <th scope="col">Дата регистрации</th>
+                                    <th scope="col">Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-info="car_brand"></td>
+                                    <td data-info="car_model"></td>
+                                    <td data-info="price"></td>
+                                    <td data-info="date"></td>
+                                    <td data-info="status"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark p-3">
+    <span>2020 © <a href="https://github.com/Dan1van" rel="nofollow">Dan1van</a></span>
+    </footer>
+{% endblock %}

@@ -1,0 +1,98 @@
+#menu.navbar li a:focus {
+    color: rgba(0,0,0,.5);
+}
+#menu.navbar li.active a {
+    color: rgba(0,0,0,.9)
+}
+.banner {
+    margin-top: 71px;
+    background-size: cover;
+    background: url('../img/banner.jpg') no-repeat fixed center;
+    height: 718px;
+}
+.banner-text-wrapper {
+    border-radius: 5px;
+    background-color: rgba(248, 249, 250, 0.6);
+}
+.banner-text-wrapper h1 {
+    font-size: 2rem;
+}
+#aboutUs ul {
+  list-style: none;
+}
+#aboutUs ul li::before {
+  content: "\2022";
+  color: #fdae3a;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.description {
+    margin-bottom: 3rem;
+}
+.department-list-wrap > .h2 {
+    margin-bottom: 2rem;
+}
+.department-list > li {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+.department-list-image {
+    max-width: 350px;
+}
+.carousel-item > img {
+    width: 100%;
+}
+.form-control:hover {
+   border-color: #dbdbdb;
+}
+.form-control:active, .form-control:focus {
+    border-color: #fdae3a;
+    box-shadow: none;
+}
+#trackApplication {
+    position: relative;
+}
+.track-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.track-image > img {
+    width: 300px;
+}
+.track-input {
+    width: 15rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+.track-form .btn {
+    background: #fdae3a;
+}
+footer > span {
+    font-size: 13px;
+    color: #b7b7b7;
+}
+
+@media (min-width: 1200px) {
+    .banner-text-wrapper h1 {
+        font-size: 3.5rem;
+    }
+    .slider {
+        padding: 0 5rem;
+    }
+}
+@media (max-width: 576px) {
+    .carousel-item > img {
+        width: 180%;
+    }
+}
+@media (max-width: 350px) {
+    .carousel-item > img {
+        width: 250%;
+    }
+}
+
+
